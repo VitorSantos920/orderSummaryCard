@@ -1,3 +1,8 @@
+/*  
+=======
+Global Styles
+=======
+*/
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
 
 * {
@@ -5,12 +10,148 @@
   padding: 0;
   box-sizing: border-box;
   border: 0;
+  transition: 1s;
+  font-family: "Red Hat Display", sans-serif;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+/*  
+=======
+Body Styles
+=======
+*/
 body {
+  /* Sizes */
   min-width: 100vw;
   min-height: 100vh;
+  /* Background */
   background: url("/assets/img/pattern-background-desktop.svg");
   background-repeat: no-repeat;
   background-size: contain;
+  background-color: hsl(225, 100%, 94%);
+  /* Flex */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*  
+=======
+Container Styles
+=======
+*/
+.container {
+  width: 450px;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #ffff;
+}
+
+/*  
+=======
+Content-order & Parent Styles
+=======
+*/
+.content-order {
+  padding: 33px 50px 55px;
+}
+
+/* title */
+.content-order .title-order {
+  font-size: 27px;
+  font-weight: 900;
+
+  color: rgba(0, 0, 0, 0.877);
+}
+
+/* desc */
+.content-order .description-order {
+  margin: 20px 0;
+  font-weight: 700;
+  color: rgba(87, 86, 86, 0.479);
+}
+
+/* specs & parents */
+.content-order .item-specs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px;
+  background-color: hsl(225, 100%, 98%);
+}
+
+.item-specs div {
+  margin-left: -55px;
+}
+
+.item-specs div .price {
+  text-align: left;
+  font-size: 16px;
+  color: rgba(48, 48, 48, 0.479);
+}
+
+.item-specs a {
+  font-weight: 700;
+  color: hsl(245, 75%, 52%);
+}
+
+.item-specs a:hover {
+  text-decoration: none;
+  color: hsl(245, 53%, 57%);
+}
+
+/* payment */
+.payment a,
+.attribution a {
+  text-decoration: none;
+}
+
+/* first */
+.payment a:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 20px 0;
+
+  border-radius: 12px;
+  color: white;
+  font-weight: 900;
+
+  background-color: hsl(245, 75%, 52%);
+  height: 45px;
+}
+
+.payment a:first-child:hover {
+  background-color: hsla(245, 75%, 52%, 0.726);
+}
+
+/* last */
+.payment a:last-child {
+  color: rgba(48, 48, 48, 0.671);
+  font-weight: 900;
+}
+
+.payment a:last-child:hover {
+  color: rgba(0, 0, 0, 0.897);
+}
+
+/*  
+=======
+Footer Styles
+=======
+*/
+.attribution {
+  margin-top: 20px;
+  font-size: 11px;
+  text-align: center;
+  font-weight: bolder;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
